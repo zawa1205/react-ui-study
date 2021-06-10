@@ -1,0 +1,66 @@
+.header {
+  position: relative;
+  .top-img {
+    background-image: url("../img/top.jpg");
+    width: 100vw;
+    height: 90vh;
+    background-size: cover;
+
+    &:before {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 90vh;
+    }
+
+    h2,
+    p {
+      color: #fff;
+      z-index: 1;
+      position: absolute;
+    }
+    h2 {
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -40%);
+      font-family: "Times New Roman";
+      font-size: 4rem;
+      @include mq-down() {
+        top: 35%;
+        transform: translate(-50%, -35%);
+      }
+    }
+    p {
+      top: 53%;
+      left: 50%;
+      transform: translate(-50%, -53%);
+
+      @include mq-down() {
+        top: 55%;
+        transform: translate(-50%, -55%);
+      }
+    }
+  }
+
+  .navBar {
+    font-size: 1.5rem;
+    background-color: rgb(223, 223, 223);
+    height: 10vh;
+
+    a {
+      display: inline-block;
+      margin: 3vh 20px;
+      color: rgb(12, 49, 89);
+      text-decoration: none;
+      &:visited {
+        color: rgb(12, 49, 89);
+      }
+      &:hover {
+        color: lighten(rgb(12, 49, 89), 20%);
+      }
+    }
+  }
+}
